@@ -1,4 +1,39 @@
 <html>
+ <script>
+02
+/*
+03
+*@Info
+04
+*Sostituisci sito1.it o aggiungi in 'host' nuovi hostname* per escludere dalla conversione automatica i link degli host specificati.
+05
+*In alcuni casi è necessario specificare l'hostname in questo modo, 'www.esempio.it'.
+06
+*/
+07
+var host = ["shrink-service.it", "sito1.it", "www.sito1.it", "sito2.it"];
+08
+(function(d, u, wout) {
+09
+    var a = d.getElementsByTagName('a');
+10
+    for (x = 0; x < a.length; x++) {
+11
+        if (wout.indexOf(a[x].hostname) === -1) {
+12
+            a[x].href = 'https://shrink-service.it/u/' + u + '/' + window.btoa(a[x].href);
+13
+        }
+14
+    }
+15
+}(document, 'MjY5NjE=', host));
+16
+</script>
+17
+ 
+18
+//*hostname = è il nome identificativo di un sito web, 'esempio.it' oppure 'www.esempio.it'.
 <head><title>siltintie</title>
 
 <body background="r.png">	
